@@ -1,0 +1,5 @@
+# Redirect http → https is handled by Cloudflare automatically
+# Add custom redirects below if needed after migration
+
+# Example: old Framer page slugs → new paths
+# /old-page   /new-page   301
