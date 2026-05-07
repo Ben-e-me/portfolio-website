@@ -1,0 +1,16 @@
+/* Safari: will-change:transform creates a stacking context which forces
+   transform-style:preserve-3d to flat (CSS spec). Chrome ignores this,
+   Safari enforces it. Fix: remove will-change from 3D carousel ul. */
+@supports (-webkit-hyphens: none) {
+  div[style*="perspective"] > ul {
+    will-change: auto !important;
+  }
+
+  /* Also remove fade mask from carousel section — mask on an ancestor
+     of a preserve-3d element also flattens 3D in Safari. */
+  section:has(> div[style*="perspective"]) {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+    mask: none !important;
+  }
+}
