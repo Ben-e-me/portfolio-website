@@ -7,6 +7,8 @@
   .framer-OHD0R .framer-e1450a,
   .framer-dwanta {
     overflow: clip !important;
+    -webkit-clip-path: inset(0 round 20px);
+    clip-path: inset(0 round 20px);
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
   }
